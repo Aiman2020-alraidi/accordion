@@ -1,20 +1,23 @@
 "use strict";
-const accordion = document.querySelectorAll(".accordion-question");
-accordion.forEach((accordions) => {
-  const btns = accordions.querySelector(".btns");
+const parentAccordion = document.querySelectorAll(".accordion-question");
+parentAccordion.forEach((accordion) => {
+  const btns = accordion.querySelector(".btns");
   btns.addEventListener("click", (e) => {
-    accordion.forEach((item) => {
-      if (item !== accordion) {
-        item.classList.remove("show-accordion");
+    parentAccordion.forEach((itemsAccordion) => {
+      if (itemsAccordion !== accordion) {
+        itemsAccordion.classList.remove("show-accordion");
       }
+      console.log(itemsAccordion);
     });
-    if (!accordions.classList.contains("show-accordion")) {
-      accordions.classList.add("show-accordion");
+    const accordionElemnt = accordion.classList;
+    if (accordionElemnt.contains("show-accordion")) {
+      accordionElemnt.remove("show-accordion");
     } else {
-      accordions.classList.remove("show-accordion");
+      accordionElemnt.add("show-accordion");
     }
   });
 });
+
 
 // btns.forEach((btn) => {
 //   btn.addEventListener("click", (e) => {
