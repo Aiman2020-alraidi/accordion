@@ -1,5 +1,5 @@
 "use strict";
-#forEaach
+// #forEaach
 const parentAccordion = document.querySelectorAll(".accordion-question");
 parentAccordion.forEach((accordion) => {
   const btns = accordion.querySelector(".btns");
@@ -18,8 +18,27 @@ parentAccordion.forEach((accordion) => {
     }
   });
 });
+// using button
+// const btns = document.querySelectorAll(".btns");
+// const question = document.querySelectorAll(".accordion-question");
 
-#for
+// btns.forEach((btn) => {
+//   btn.addEventListener("click", (e) => {
+//     const parentElement = e.currentTarget.parentElement.parentElement.classList;
+//     if (!parentElement.contains("show-accordion")) {
+//       question.forEach((items) => {
+//         if (items !== btn) {
+//           items.classList.remove("show-accordion");
+//         }
+//       });
+//       parentElement.add("show-accordion");
+//     } else {
+//       parentElement.remove("show-accordion");
+//     }
+//   });
+// });
+
+// for
 // const btns = document.querySelectorAll(".btns");
 // for (let i = 0; i < btns.length; i++) {
 //   btns[i].addEventListener("click", (e) => {
