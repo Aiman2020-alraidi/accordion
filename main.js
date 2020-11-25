@@ -18,6 +18,7 @@ parentAccordion.forEach((accordion) => {
     }
   });
 });
+
 // using button
 // const btns = document.querySelectorAll(".btns");
 // const question = document.querySelectorAll(".accordion-question");
@@ -54,15 +55,9 @@ parentAccordion.forEach((accordion) => {
 //   });
 // }
 
-
 // btns.forEach((btn) => {
 //   btn.addEventListener("click", (e) => {
 //     const elemAccordion = e.currentTarget.parentElement.parentElement;
-//     if (!elemAccordion.classList.contains("show-accordion")) {
-//       elemAccordion.classList.add("show-accordion");
-//     } else {
-//       elemAccordion.classList.remove("show-accordion");
-//     }
-//     // elemAccordion.classList.toggle("show-accordion");
+//     elemAccordion.classList.toggle("show-accordion");
 //   });
 // });
