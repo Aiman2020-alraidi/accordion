@@ -1,4 +1,5 @@
 "use strict";
+#forEaach
 const parentAccordion = document.querySelectorAll(".accordion-question");
 parentAccordion.forEach((accordion) => {
   const btns = accordion.querySelector(".btns");
@@ -17,6 +18,22 @@ parentAccordion.forEach((accordion) => {
     }
   });
 });
+
+#for
+// const btns = document.querySelectorAll(".btns");
+// for (let i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener("click", (e) => {
+//     const parentElement = e.currentTarget.parentElement.parentElement.classList;
+//     if (!parentElement.contains("show-accordion")) {
+//       for (let i = 0; i < btns.length; i++) {
+//         btns[i].parentElement.parentElement.classList.remove("show-accordion");
+//       }
+//       parentElement.add("show-accordion");
+//     } else {
+//       parentElement.remove("show-accordion");
+//     }
+//   });
+// }
 
 
 // btns.forEach((btn) => {
