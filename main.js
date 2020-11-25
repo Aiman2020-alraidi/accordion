@@ -1,5 +1,5 @@
 "use strict";
-// #forEaach
+// forEaach
 const parentAccordion = document.querySelectorAll(".accordion-question");
 parentAccordion.forEach((accordion) => {
   const btns = accordion.querySelector(".btns");
