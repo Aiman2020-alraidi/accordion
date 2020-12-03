@@ -1,23 +1,43 @@
 "use strict";
 // forEaach
-const parentAccordion = document.querySelectorAll(".accordion-question");
-parentAccordion.forEach((accordion) => {
-  const btns = accordion.querySelector(".btns");
-  btns.addEventListener("click", (e) => {
-    parentAccordion.forEach((itemsAccordion) => {
-      if (itemsAccordion !== accordion) {
-        itemsAccordion.classList.remove("show-accordion");
-      }
-      console.log(itemsAccordion);
-    });
-    const accordionElemnt = accordion.classList;
-    if (accordionElemnt.contains("show-accordion")) {
-      accordionElemnt.remove("show-accordion");
+const message = document.querySelectorAll(".accordion-test");
+const question = document.querySelectorAll(".accordion-question");
+message.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    const parentElement = e.currentTarget.parentElement.classList;
+    if (parentElement.contains("show-accordion")) {
+      parentElement.remove("show-accordion");
     } else {
-      accordionElemnt.add("show-accordion");
+      question.forEach((itemQuestion) => {
+        if (itemQuestion !== item) {
+          itemQuestion.classList.remove("show-accordion");
+        }
+        console.log("question ", itemQuestion);
+        console.log("item ", item);
+      });
+      parentElement.add("show-accordion");
     }
   });
 });
+
+// const parentAccordion = document.querySelectorAll(".accordion-question");
+// parentAccordion.forEach((accordion) => {
+//   const btns = accordion.querySelector(".btns");
+//   btns.addEventListener("click", (e) => {
+//     parentAccordion.forEach((itemsAccordion) => {
+//       if (itemsAccordion !== accordion) {
+//         itemsAccordion.classList.remove("show-accordion");
+//       }
+//       console.log(itemsAccordion);
+//     });
+//     const accordionElemnt = accordion.classList;
+//     if (accordionElemnt.contains("show-accordion")) {
+//       accordionElemnt.remove("show-accordion");
+//     } else {
+//       accordionElemnt.add("show-accordion");
+//     }
+//   });
+// });
 
 // using button
 // const btns = document.querySelectorAll(".btns");
